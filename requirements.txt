@@ -1,9 +1,8 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-# platform: osx-arm64
-dj-database-url=1.2.0=pypi_0
-django=4.1=py310hca03da5_0
-gunicorn=20.1.0=py310hca03da5_0
-psycopg2-binary=2.9.5=pypi_0
-wheel=0.38.4=py310hca03da5_0
-whitenoise=6.4.0=pypi_0
+asgiref @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_63w24gebjz/croots/recipe/asgiref_1661287537348/work
+certifi @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_5d968ni_yn/croot/certifi_1671487774636/work/certifi
+dj-database-url==1.2.0
+Django @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_cdse89o2w5/croots/recipe/django_1661292537238/work
+gunicorn @ file:///Users/ktietz/ci_310/gunicorn_1643966106412/work
+psycopg2-binary==2.9.5
+sqlparse @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_73ubbfcjni/croot/sqlparse_1668793445223/work
+whitenoise==6.4.0
