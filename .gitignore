@@ -127,3 +127,21 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Text backup files
+*.bak
+
+# Database
+*.sqlite3
+
+# Mac configura
+
+# Text backup files
+*.bak
+
+# Database
+*.sqlite3
+
+# Mac configuration
+.DS_Storetion
+.DS_Store

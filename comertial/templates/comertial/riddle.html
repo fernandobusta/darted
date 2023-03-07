@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block newstatic %}
+<link rel="stylesheet" href="{% static 'css/riddles.css' %}">
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+    <div id="video-container">
+      <video autoplay muted loop>
+        <source src="{% static 'images/video.mp4' %}" type="video/mp4">
+      </video>
+    </div>
+
+    <div id="logo">
+      <img src="{% static 'images/newlogo2.png' %}" alt="Logo" style="opacity: 0.7;">
+    </div>
+
+    <div id="image">
+      <img src="{% static 'images/image.png' %}" alt="Image" style="opacity: 0.5;">
+    </div>
+
+    <div class="content">
+      <p>The illustration represents the map of a district with a peculiar system of
+        irrigation. The lines are waterways enclosing the four islands, A, B, C, and D,
+        each with its house, and it will be seen that there are nine bridges available. Whenever Tompkins leaves his house to visit his friend Johnson, who lives in one of the others, he always carries out the eccentric rule of crossing every  one of the bridges once, and once only, before arriving at his destination. How many different routes has he to select from? You may choose any house
+        you like as the residence of Tompkins</p>
+    </div>
+{% endblock %}
