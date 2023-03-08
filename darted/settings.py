@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-*+rb9apw(l#c5=x=&l345d2^6(cr6(19grap$p@k#jp6_^7r5d
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = True
+DEBUG = False
 
 ## For example, for a site URL at 'web-production-3640.up.railway.app'
 ## (replace the string below with your own site URL):
