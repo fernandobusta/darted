@@ -34,7 +34,8 @@ DATABASES = {
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-*+rb9apw(l#c5=x=&l345d2^6(cr6(19grap$p@k#jp6_^7r5d'
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = 'dv!6%4wv01fae!wl5ck4&m4a^n^b0srlxu(@8e5qf35ax+f(up'
+
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
