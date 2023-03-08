@@ -33,8 +33,8 @@ DATABASES = {
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-*+rb9apw(l#c5=x=&l345d2^6(cr6(19grap$p@k#jp6_^7r5d'
-SECRET_KEY = 'dv!6%4wv01fae!wl5ck4&m4a^n^b0srlxu(@8e5qf35ax+f(up'
+# SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-*+rb9apw(l#c5=x=&l345d2^6(cr6(19grap$p@k#jp6_^7r5d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
@@ -101,12 +101,12 @@ WSGI_APPLICATION = 'darted.wsgi.application'
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PGDATABASE'),
-        'USER': os.getenv('PGUSER'),
-        'PASSWORD': os.getenv('PGPASSWORD'),
-        'HOST': os.getenv('PGHOST'),
-        'PORT': os.getenv('PGPORT'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ('PGDATABASE'),
+        'USER': os.environ('PGUSER'),
+        'PASSWORD': os.environ('PGPASSWORD'),
+        'HOST': os.environ('PGHOST'),
+        'PORT': os.environ('PGPORT'),
     }
 }
 
