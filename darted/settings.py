@@ -147,7 +147,7 @@ USE_TZ = True
 STATIC_ROOT = 'staticfiles'
 # This is sufficient for js and css
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/' # Change / to deploy
 # This is needed for any kind of media
 MEDIA_URL = '/images/'
 
