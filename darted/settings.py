@@ -34,7 +34,7 @@ SECRET_KEY = 'django-insecure-*+rb9apw(l#c5=x=&l345d2^6(cr6(19grap$p@k#jp6_^7r5d
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
+DEBUG = True
 
 ## For example, for a site URL at 'web-production-3640.up.railway.app'
 ## (replace the string below with your own site URL):
@@ -61,7 +61,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # White noise for staticfiles
+    #'whitenoise.middleware.WhiteNoiseMiddleware', # White noise for staticfiles
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,11 +144,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-# This is sufficient for js and css
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
-STATIC_URL = 'static/' # Change / to deploy
-# This is needed for any kind of media
 MEDIA_URL = '/images/'
 
 
@@ -164,7 +165,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Simplified static file serving.
 # https://pypi.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ## For example, for a site URL is at 'web-production-3640.up.railway.app'
 ## (replace the string below with your own site URL):
