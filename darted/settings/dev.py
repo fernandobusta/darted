@@ -17,3 +17,14 @@ ALLOWED_HOSTS = ['web-production-c6bf.up.railway.app', 'darted.io', 'www.darted.
 # During development, you can instead set just the base URL
 # (you might decide to change the site a few times).
 # ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
+
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
