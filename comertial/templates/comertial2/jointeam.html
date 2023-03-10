@@ -9,7 +9,7 @@
             <div class="row gx-4 gx-lg-5">
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-                    <h2 class="text-white mb-5">Get notified when we launch!</h2>
+                    <h2 class="text-white mb-5">Want to Join the team?</h2>
 
                     <!-- ======================== CONTACT FOR HERE ======================== -->
                     <form class="form-signup" action="" method="POST">
@@ -17,9 +17,17 @@
                         <!-- Email address input-->
                         
                         <div class="row input-group-newsletter">
-                            <!--<div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>-->
                             <div class="col">{{ form.email }}</div>
-                            <div class="col-auto"><button class="btn btn-primary " type="submit">Notify Me!</button></div>
+                        </div>
+                        <br>
+                        <div class="row input-group-newsletter">
+                            <div class="col">{{ form.name }}</div>
+                            <div class="col">{{ form.city }}</div>
+                        </div>
+                        <br>
+                        <div class="row input-group-newsletter">
+                            <div class="col">{{ form.other }}</div>
+                            <div class="col-auto"><button class="btn btn-primary " type="submit">Submit!</button></div>
                         </div>
                     </form>
                     <!-- ======================== CONTACT FORM END ======================== -->

@@ -4,7 +4,7 @@ from .views import *
 urlpatterns = [
    
    # Form
-   path('questions', questionsView, name='questions'),
+   path('jointeam', joinTeamView, name='jointeam'),
 
    # For the new template
    path('', index, name="index"),
