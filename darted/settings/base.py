@@ -12,13 +12,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
-#from dotenv import load_dotenv
-
+import dj_database_url         # Daabase config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 #load_dotenv(os.path.join(BASE_DIR, ".env"))
 
@@ -28,20 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = ''
-SECRET_KEY = 'django-insecure-*+rb9apw(l#c5=x=&l345d2^6(cr6(19grap$p@k#jp6_^7r5d'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False   
-
-## For example, for a site URL at 'web-production-3640.up.railway.app'
-## (replace the string below with your own site URL):
-ALLOWED_HOSTS = ['web-production-c6bf.up.railway.app', 'darted.io', 'www.darted.io', '127.0.0.1']
-# During development, you can instead set just the base URL
-# (you might decide to change the site a few times).
-# ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
 
 # Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
@@ -56,12 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'comertial', # This is our app
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # White noise for staticfiles
+    #'whitenoise.middleware.WhiteNoiseMiddleware', # White noise for staticfiles
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -161,7 +147,7 @@ STATIC_URL = '/static/'
 
 # Simplified static file serving.
 # https://pypi.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
