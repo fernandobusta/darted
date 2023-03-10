@@ -1,29 +1,23 @@
 from django.db import models
 
-class Client(models.Model):
-    """Model representing a Client"""
-    name = models.CharField(max_length=200, help_text='Enter a name for the client')
+
+class ContactEmail(models.Model):
+    """Emails entered in the Launch page"""
+    id = models.AutoField(primary_key=True)
     email = models.EmailField()
+
+    def __str__(self):
+        """String representation of email"""
+        return self.email
     
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return self.name
-
-class Player(models.Model):
-    """Model representing the Player"""
+class JoinTeam(models.Model):
+    """People interested in joinning the team"""
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=50)
     email = models.EmailField()
-    name = models.CharField(max_length=100)
-    result = models.CharField(max_length=200)
-    questions = models.TextField()
+    city = models.CharField(max_length=50)
+    other = models.TextField()
 
     def __str__(self):
-        """String representing the Player object"""
-        return f'{self.name} has the result: {self.result}'
-
-
-class Question(models.Model):
-    """Model for questions on comertial web"""
-    name = models.CharField(max_length=100)
-    email = models.EmailField()
-    description = models.TextField()
+        return f'{self.name} with email: {self.email} from: {self.city} says: {self.other}'

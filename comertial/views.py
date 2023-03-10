@@ -5,19 +5,19 @@ from .forms import *
 
 
 
-def questionsView(request):
+def joinTeamView(request):
     if request.method == "POST":
         # User has filled in the form
         # and is sending data back
-        form = QuestionForm(request.POST)
+        form = JoinTeam(request.POST)
         if form.is_valid():
-            quest = form.save()
+            join_t = form.save()
             return redirect('index')
         else:
-            return render(request, 'comertial2/questions.html', {'form':form})
+            return render(request, 'comertial2/jointeam.html', {'form':form})
     else:
-        form = QuestionForm()
-        return render(request, 'comertial2/questions.html', {'form':form})
+        form = JoinTeam()
+        return render(request, 'comertial2/jointeam.html', {'form':form})
     
 def completed(request):
     return render(request, 'comertial2/completed.html')
