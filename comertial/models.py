@@ -17,7 +17,7 @@ class JoinTeam(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
     city = models.CharField(max_length=50)
-    other = models.TextField()
+    other = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return f'{self.name} with email: {self.email} from: {self.city} says: {self.other}'
+        return f'{self.name} -> with email: {self.email}, from: {self.city}, says: {self.other}'

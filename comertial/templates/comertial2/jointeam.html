@@ -2,14 +2,81 @@
 {% load static %}
 
 {% block content %}
-<header class="masthead">
-    <div class="container px-4 px-lg-5 h-100">
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_table }}
-    <button type="submit">Submit</button>
-</form>    
-</div>
-</header>
+    <!-- Signup-->
+    <section class="signup-section" id="signup">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">Want to Join the team?</h2>
+
+                    <!-- ======================== CONTACT FOR HERE ======================== -->
+                    <form class="form-signup" action="" method="POST">
+                        {% csrf_token %}
+                        <!-- Email address input-->
+                        
+                        <div class="row input-group-newsletter">
+                            <div class="col">{{ form.email }}</div>
+                        </div>
+                        <br>
+                        <div class="row input-group-newsletter">
+                            <div class="col">{{ form.name }}</div>
+                            <div class="col">{{ form.city }}</div>
+                        </div>
+                        <br>
+                        <div class="row input-group-newsletter">
+                            <div class="col">{{ form.other }}</div>
+                            <div class="col-auto"><button class="btn btn-primary " type="submit">Submit!</button></div>
+                        </div>
+                    </form>
+                    <!-- ======================== CONTACT FORM END ======================== -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Contact-->
+<section class="contact-section bg-black">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Linked In</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50"><a href="https://www.linkedin.com/company/darted/">DARTED</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Email</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50"><a href="#!">contact@darted.io</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Phone</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">+1 (555) 902-8832</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+            <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
