@@ -12,6 +12,8 @@ The web: prefix tells Railway that this is a web process and can be sent HTTP tr
 - STATICFILES_DIRS: This lists additional directories that Django's collectstatic tool should search for static files.
 
 
+# SETTINGS
 ## Deployment
 Settings folder defines configuration for production and development.
 Secret key should be an environment variable in server
+
