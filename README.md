@@ -17,3 +17,5 @@ The web: prefix tells Railway that this is a web process and can be sent HTTP tr
 Settings folder defines configuration for production and development.
 Secret key should be an environment variable in server
 
+### MIDDLEWARE
+Middleware will be handled separatly for production environment
