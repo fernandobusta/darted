@@ -10,13 +10,20 @@
                 <div class="col-md-10 col-lg-8 mx-auto text-center">
                     <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                     <h2 class="text-white mb-5">Get notified when we launch!</h2>
-                    <form class="form-signup" method="POST">
+
+                    <!-- ======================== CONTACT FOR HERE ======================== -->
+                    <form class="form-signup" action="" method="POST">
+                        {% csrf_token %}
                         <!-- Email address input-->
+                        
                         <div class="row input-group-newsletter">
-                            <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
-                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                            <!--<div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>-->
+                            <div class="col">{{ form.email }}</div>
+                            <div class="col-auto"><button class="btn btn-primary " type="submit">Notify Me!</button></div>
                         </div>
                     </form>
+                    <!-- ======================== CONTACT FORM END ======================== -->
+
                 </div>
             </div>
         </div>

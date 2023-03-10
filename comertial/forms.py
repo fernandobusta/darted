@@ -6,16 +6,16 @@ class ContactForm(forms.ModelForm):
         model = ContactEmail
         fields = ['email']
     
-    widgets = {
-        'email': forms.EmailInput(attrs={
-                'class': "form-control", 
-                'placeholder': 'example@mail.com'
-                }),
-    }
+        widgets = {
+            'email': forms.EmailInput(attrs={
+                    'class': "form-control",
+                    'placeholder': 'Enter your email',
+                    }),
+        }
 
 class JoinTeamForm(forms.ModelForm):
     class Meta:
-        model = JoinTeam
+        model = JoinTeam    
         fields = ['name', 'email', 'city', 'other']
     widgets = {
             'name': forms.TextInput(attrs={
