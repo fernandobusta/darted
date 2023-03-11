@@ -19,3 +19,6 @@ Secret key should be an environment variable in server
 
 ### MIDDLEWARE
 Middleware will be handled separatly for production environment
+
+# LOGO
+Files on static -> choose one
