@@ -22,19 +22,19 @@ class JoinTeamForm(forms.ModelForm):
         widgets = {
                 'name': forms.TextInput(attrs={
                     'class': "form-control",
-                    'placeholder': 'Enter your Name...'
+                    'placeholder': 'Name'
                     }),
                 'email': forms.EmailInput(attrs={
                     'class': "form-control", 
-                    'placeholder': 'Enter your Email...'
+                    'placeholder': 'Email'
                     }),
                 'city': forms.TextInput(attrs={
                     'class': "form-control",
-                    'placeholder': 'City of residence'
+                    'placeholder': 'City'
                     }),
                 'other': forms.TextInput(attrs={
                     'class': "form-control",
-                    'placeholder': 'Other info (Optional)'
+                    'placeholder': '(Optional) Additional info'
                     }),
             }
     

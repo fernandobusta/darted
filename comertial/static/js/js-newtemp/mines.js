@@ -49,7 +49,7 @@ function checkLevelCompletion() {
   }
   if (levelComplete) {
     alert("You Win!");
-    revealMines();
+    document.getElementById('mymessage').innerHTML = 'Imagine how much you could save.';
   }
 }
 
@@ -57,7 +57,7 @@ function clickCell(cell) {
   //Check if the end-user clicked on a mine
   if (cell.getAttribute("data-mine")=="true") {
     revealMines();
-    document.getElementById('mymessage').innerHTML = 'Imagine how fast you could run.';
+    document.getElementById('mymessage').innerHTML = 'Imagine how much you could save.';
 
 
   } else {
